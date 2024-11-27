@@ -6,8 +6,8 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const handleAddTask = (newTask) => {
-    setTasks([...tasks, newTask]);
-  };
+    setTasks((prevTask) => [...prevTask, newTask]);
+  }
 
   const handleToggleTask = (id , onToggleTask ) => {
     setTasks((prevTasks) => prevTasks.map((task) => 
